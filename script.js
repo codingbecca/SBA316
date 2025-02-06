@@ -10,5 +10,5 @@
 // todo: Modify at least one attribute of an element in response to user interaction.
 // todo: Register at least two different event listeners and create the associated event handler functions.
 // todo: Use at least two Browser Object Model (BOM) properties or methods.
-// todo: Include at least one form and/or input with HTML attribute validation.
+// * Include at least one form and/or input with HTML attribute validation.
 // todo: Include at least one form and/or input with DOM event-based validation. (This can be the same form or input as the one above, but should include event-based validation in addition to the HTML attribute validation.)

@@ -19,7 +19,6 @@ introText.textContent =
 // ? Use appendChild and/or prepend to add new elements to the DOM.
 intro.appendChild(introText);
 // todo: Use the DocumentFragment interface or HTML templating with the cloneNode method to create templated content.
-// todo: Modify the HTML or text content of at least one element in response to user interaction using innerHTML, innerText, or textContent.
 // ? Modify the style and/or CSS classes of an element in response to user interactions using the style or classList properties.
 //success div disappears via style attribute when clicked
 const successDiv = document.getElementById("successDiv");
@@ -29,7 +28,20 @@ function hideSuccessDiv(){
 
 successDiv.addEventListener('click', hideSuccessDiv);
 
-// todo: Modify at least one attribute of an element in response to user interaction.
+// ? Modify the HTML or text content of at least one element in response to user interaction using innerHTML, innerText, or textContent.
+// ? Modify at least one attribute of an element in response to user interaction.
+const themeBtn = document.getElementById('themeBtn')
+
+themeBtn.addEventListener('click', handleThemeBtnClick)
+
+function handleThemeBtnClick(){
+    document.body.classList.toggle('darkMode')
+    if (document.body.classList.contains('darkMode')){
+        themeBtn.innerHTML = '<img width="60" height="60" src="./assets/sunIcon.png" alt="sun--v1"/>';
+    } else if (!document.body.classList.contains('darkMode')) {
+        themeBtn.innerHTML = '<img width="60" height="60" src="https://img.icons8.com/ios-glyphs/60/bright-moon--v1.png" alt="bright-moon--v1"/>';
+    }
+}
 // ? Register at least two different event listeners and create the associated event handler functions.
 // todo: Use at least two Browser Object Model (BOM) properties or methods.
 // ? Include at least one form and/or input with HTML attribute validation.

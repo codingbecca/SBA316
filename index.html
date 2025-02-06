@@ -21,41 +21,37 @@
   </head>
   <body>
     <main class="p-3">
-      <div>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
-          at saepe itaque soluta deserunt odio, dolorum eaque unde! Quibusdam,
-          numquam. Maxime ipsam eum atque magni quas laudantium sapiente
-          nesciunt voluptatum! Facere quo, sapiente iure ducimus dolor corrupti
-          qui adipisci omnis debitis illum nam, numquam nisi optio suscipit! Hic
-          fugiat nam doloribus sunt quam, quae molestiae ducimus fuga omnis,
-          voluptates veritatis. Ipsam sapiente amet laboriosam voluptatem
-          inventore, totam accusamus ducimus, porro, id iure repellendus neque
-          eligendi illum ad maxime consequatur doloribus explicabo error
-          molestias quibusdam quam! Nemo rerum quidem vero ex?
-        </p>
+      <div id="intro">
+        
       </div>
       <div class="container mx-auto">
         <div class="row py-2">
           <div class="col d-flex justify-content-center">
-            <img src="./assets/greenYarn.jpg" alt="" class="w-75">
+            <img src="./assets/greenYarn.jpg" alt="" class="w-75" />
           </div>
           <div class="col d-flex justify-content-center">
             <form id="signUp">
               <input
                 type="text"
                 name="username"
-                placeholder="Username"
+                placeholder="username"
                 class="form-control"
                 required
               />
               <br />
-              <input type="email" name="email" placeholder="email" class="form-control" required />
+              <input
+                type="email"
+                name="email"
+                placeholder="email"
+                class="form-control"
+                required
+              />
               <br />
               <input
                 type="password"
                 name="password"
                 placeholder="password"
+                minlength="12"
                 class="form-control"
                 required
               />
@@ -64,54 +60,113 @@
                 type="password"
                 name="confirmPassword"
                 placeholder="confirm password"
+                minlength="12"
                 class="form-control"
                 required
               />
               <br />
               <div class="text-center">
-
-                  <input type="submit" value="Sign Up" class="btn btn-outline-primary" />
+                  <div id="successDiv"></div>
+                <input
+                  type="submit"
+                  value="Sign Up"
+                  class="btn btn-outline-primary"
+                />
               </div>
             </form>
           </div>
         </div>
         <div class="row py-2 gap-3 d-flex justify-content-center">
-            <div class="card" style="width: 18rem;">
-                <img src="./assets/greyKnitting.jpg" class="card-img-top" alt="grey knit fabric">
-                <div class="card-body">
-                  <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At eligendi quod, libero sunt itaque illo officiis. Expedita illum odio repellendus. Ipsa dolorum tempora eveniet est maxime aliquam, praesentium minus deleniti.</p>
-                </div>
-              </div>
-              <div class="card" style="width: 18rem;">
-                <img src="./assets/greyKnitting.jpg" class="card-img-top" alt="grey knit fabric">
-                <div class="card-body">
-                  <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At eligendi quod, libero sunt itaque illo officiis. Expedita illum odio repellendus. Ipsa dolorum tempora eveniet est maxime aliquam, praesentium minus deleniti.</p>
-                </div>
-              </div>
-              <div class="card" style="width: 18rem;">
-                <img src="./assets/greyKnitting.jpg" class="card-img-top" alt="grey knit fabric">
-                <div class="card-body">
-                  <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At eligendi quod, libero sunt itaque illo officiis. Expedita illum odio repellendus. Ipsa dolorum tempora eveniet est maxime aliquam, praesentium minus deleniti.</p>
-                </div>
-              </div>
-              <div class="card" style="width: 18rem;">
-                <img src="./assets/greyKnitting.jpg" class="card-img-top" alt="grey knit fabric">
-                <div class="card-body">
-                  <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At eligendi quod, libero sunt itaque illo officiis. Expedita illum odio repellendus. Ipsa dolorum tempora eveniet est maxime aliquam, praesentium minus deleniti.</p>
-                </div>
-              </div>
-              <div class="card" style="width: 18rem;">
-                <img src="./assets/greyKnitting.jpg" class="card-img-top" alt="grey knit fabric">
-                <div class="card-body">
-                  <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At eligendi quod, libero sunt itaque illo officiis. Expedita illum odio repellendus. Ipsa dolorum tempora eveniet est maxime aliquam, praesentium minus deleniti.</p>
-                </div>
-              </div>
-              <div class="card" style="width: 18rem;">
-                <img src="./assets/greyKnitting.jpg" class="card-img-top" alt="grey knit fabric">
-                <div class="card-body">
-                  <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At eligendi quod, libero sunt itaque illo officiis. Expedita illum odio repellendus. Ipsa dolorum tempora eveniet est maxime aliquam, praesentium minus deleniti.</p>
-                </div>
-              </div>
+          <div class="card" style="width: 18rem">
+            <img
+              src="./assets/greyKnitting.jpg"
+              class="card-img-top"
+              alt="grey knit fabric"
+            />
+            <div class="card-body">
+              <p class="card-text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. At
+                eligendi quod, libero sunt itaque illo officiis. Expedita illum
+                odio repellendus. Ipsa dolorum tempora eveniet est maxime
+                aliquam, praesentium minus deleniti.
+              </p>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem">
+            <img
+              src="./assets/greyKnitting.jpg"
+              class="card-img-top"
+              alt="grey knit fabric"
+            />
+            <div class="card-body">
+              <p class="card-text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. At
+                eligendi quod, libero sunt itaque illo officiis. Expedita illum
+                odio repellendus. Ipsa dolorum tempora eveniet est maxime
+                aliquam, praesentium minus deleniti.
+              </p>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem">
+            <img
+              src="./assets/greyKnitting.jpg"
+              class="card-img-top"
+              alt="grey knit fabric"
+            />
+            <div class="card-body">
+              <p class="card-text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. At
+                eligendi quod, libero sunt itaque illo officiis. Expedita illum
+                odio repellendus. Ipsa dolorum tempora eveniet est maxime
+                aliquam, praesentium minus deleniti.
+              </p>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem">
+            <img
+              src="./assets/greyKnitting.jpg"
+              class="card-img-top"
+              alt="grey knit fabric"
+            />
+            <div class="card-body">
+              <p class="card-text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. At
+                eligendi quod, libero sunt itaque illo officiis. Expedita illum
+                odio repellendus. Ipsa dolorum tempora eveniet est maxime
+                aliquam, praesentium minus deleniti.
+              </p>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem">
+            <img
+              src="./assets/greyKnitting.jpg"
+              class="card-img-top"
+              alt="grey knit fabric"
+            />
+            <div class="card-body">
+              <p class="card-text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. At
+                eligendi quod, libero sunt itaque illo officiis. Expedita illum
+                odio repellendus. Ipsa dolorum tempora eveniet est maxime
+                aliquam, praesentium minus deleniti.
+              </p>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem">
+            <img
+              src="./assets/greyKnitting.jpg"
+              class="card-img-top"
+              alt="grey knit fabric"
+            />
+            <div class="card-body">
+              <p class="card-text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. At
+                eligendi quod, libero sunt itaque illo officiis. Expedita illum
+                odio repellendus. Ipsa dolorum tempora eveniet est maxime
+                aliquam, praesentium minus deleniti.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </main>

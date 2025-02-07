@@ -1,6 +1,34 @@
 // ? Cache at least one element using selectElementById.
 const intro = document.getElementById("intro");
 
+// ? Use the DocumentFragment interface or HTML templating with the cloneNode method to create templated content.
+function createCard(imgSrc, imgAlt, cardBody) {
+    const cardTemplate = document.getElementById('cardTemplate');
+    const clone = cardTemplate.content.cloneNode(true);
+
+    const img = clone.querySelector('img');
+    img.setAttribute('src', imgSrc);
+    img.setAttribute('alt', imgAlt);
+
+    const body = clone.querySelector('p');
+    body.textContent = cardBody;
+
+    return clone;
+}
+
+const cardContainer = document.getElementById('cardContainer');
+
+// I used _ as the variable for the loop here since I'm just using the loop to execute a task a certain number of times and don't need to actually access the value of the variable
+for (let _ = 0; _ < 6; _++){
+    const imgSrc = './assets/greyKnitting.jpg';
+    const imgAlt = 'grey knit fabric';
+    const cardBody = 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. At eligendi quod, libero sunt itaque illo officiis. Expedita illum odio repellendus. Ipsa dolorum tempora eveniet est maxime aliquam, praesentium minus deleniti.'
+
+    const card = createCard(imgSrc, imgAlt, cardBody);
+    cardContainer.appendChild(card);
+
+}
+
 // ? Cache at least one element using querySelector or querySelectorAll.
 const cards = document.querySelectorAll(".card");
 
@@ -18,7 +46,7 @@ introText.textContent =
 
 // ? Use appendChild and/or prepend to add new elements to the DOM.
 intro.appendChild(introText);
-// todo: Use the DocumentFragment interface or HTML templating with the cloneNode method to create templated content.
+
 // ? Modify the style and/or CSS classes of an element in response to user interactions using the style or classList properties.
 //success div disappears via style attribute when clicked
 const successDiv = document.getElementById("successDiv");
@@ -42,11 +70,21 @@ function handleThemeBtnClick(){
         themeBtn.innerHTML = '<img width="60" height="60" src="https://img.icons8.com/ios-glyphs/60/bright-moon--v1.png" alt="bright-moon--v1"/>';
     }
 }
+// ? Use at least two Browser Object Model (BOM) properties or methods.
+const width = screen.availWidth;
+const height = screen.availHeight;
+const windowWidth = window.innerWidth;
+const windowHeight = window.innerHeight;
+const screenSize = document.createElement('p');
+screenSize.textContent = `Your available  screen is ${width} by ${height} pixels. The available space in your browser window is ${windowWidth} by ${windowHeight} pixels`;
+intro.appendChild(screenSize)
+
 // ? Register at least two different event listeners and create the associated event handler functions.
-// todo: Use at least two Browser Object Model (BOM) properties or methods.
 // ? Include at least one form and/or input with HTML attribute validation.
 // ? Include at least one form and/or input with DOM event-based validation. (This can be the same form or input as the one above, but should include event-based validation in addition to the HTML attribute validation.)
 const signUpForm = document.getElementById("signUp");
+const username = signUpForm.elements.username;
+const email = signUpForm.elements.email;
 const password = signUpForm.elements.password;
 const confirmPassword = signUpForm.elements.confirmPassword;
 
@@ -89,7 +127,11 @@ function handlePasswordMatch() {
 
 function handleSubmit(e) {
   e.preventDefault();
-  displaySuccessDiv('Registration successfully captured')
+  displaySuccessDiv('Registration successfully captured');
+  username.value = '';
+  email.value = '';
+  password.value = '';
+  confirmPassword.value = '';
 }
 
 function displaySuccessDiv(msg) {
